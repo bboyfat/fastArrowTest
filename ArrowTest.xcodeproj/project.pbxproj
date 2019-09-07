@@ -14,6 +14,9 @@
 		C2FB98C1232438DE0036B318 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2FB98C0232438DE0036B318 /* Assets.xcassets */; };
 		C2FB98C4232438DE0036B318 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2FB98C2232438DE0036B318 /* LaunchScreen.storyboard */; };
 		C2FB98CC232452370036B318 /* GamoeOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB98CB232452360036B318 /* GamoeOverScene.swift */; };
+		C2FB98CE232461600036B318 /* shot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C2FB98CD232461600036B318 /* shot.mp3 */; };
+		C2FB98D2232461920036B318 /* avengers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C2FB98D1232461920036B318 /* avengers.mp3 */; };
+		C2FB98D6232464170036B318 /* arrow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C2FB98D5232464170036B318 /* arrow.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		C2FB98C3232438DE0036B318 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2FB98C5232438DE0036B318 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2FB98CB232452360036B318 /* GamoeOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamoeOverScene.swift; sourceTree = "<group>"; };
+		C2FB98CD232461600036B318 /* shot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shot.mp3; sourceTree = "<group>"; };
+		C2FB98D1232461920036B318 /* avengers.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = avengers.mp3; sourceTree = "<group>"; };
+		C2FB98D5232464170036B318 /* arrow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = arrow.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,9 @@
 				C2FB98B9232438DD0036B318 /* GameScene.swift */,
 				C2FB98CB232452360036B318 /* GamoeOverScene.swift */,
 				C2FB98BB232438DD0036B318 /* GameViewController.swift */,
+				C2FB98CD232461600036B318 /* shot.mp3 */,
+				C2FB98D5232464170036B318 /* arrow.mp3 */,
+				C2FB98D1232461920036B318 /* avengers.mp3 */,
 				C2FB98BD232438DD0036B318 /* Main.storyboard */,
 				C2FB98C0232438DE0036B318 /* Assets.xcassets */,
 				C2FB98C2232438DE0036B318 /* LaunchScreen.storyboard */,
@@ -128,8 +137,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2FB98D6232464170036B318 /* arrow.mp3 in Resources */,
 				C2FB98BF232438DD0036B318 /* Main.storyboard in Resources */,
+				C2FB98CE232461600036B318 /* shot.mp3 in Resources */,
 				C2FB98C1232438DE0036B318 /* Assets.xcassets in Resources */,
+				C2FB98D2232461920036B318 /* avengers.mp3 in Resources */,
 				C2FB98C4232438DE0036B318 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -56,6 +56,11 @@ class GameScene: SKScene {
             }),
             SKAction.wait(forDuration: 2.0)
             ])))
+        
+        let backgroundMusic = SKAudioNode(fileNamed: "avengers.mp3")
+        
+        backgroundMusic.autoplayLooped = true
+        addChild(backgroundMusic)
     }
     
     func random() -> CGFloat {
@@ -65,7 +70,7 @@ class GameScene: SKScene {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        run(SKAction.playSoundFileNamed("arrow.mp3", waitForCompletion: false))
         shot()
         
     }
@@ -74,7 +79,7 @@ class GameScene: SKScene {
         
         let shootingArrow = SKSpriteNode(imageNamed: "arrow")
         shootingArrow.position = arrow.position
-        shootingArrow.physicsBody = SKPhysicsBody(circleOfRadius: shootingArrow.size.width/2)
+        shootingArrow.physicsBody = SKPhysicsBody(circleOfRadius: shootingArrow.size.width/2 + 20)
         shootingArrow.physicsBody?.isDynamic = true
         shootingArrow.physicsBody?.categoryBitMask = PhysicalCategory.shootingArrow
         shootingArrow.physicsBody?.contactTestBitMask = PhysicalCategory.target
@@ -129,13 +134,16 @@ class GameScene: SKScene {
     func didShot(shootingArrow: SKSpriteNode, target: SKSpriteNode) {
         print("SHOT")
        
+        run(SKAction.playSoundFileNamed("shot.mp3", waitForCompletion: false))
         score += 2
         
         shootingArrow.physicsBody?.pinned = true
-        let a = SKPhysicsJointPin.joint(withBodyA: target.physicsBody! , bodyB: shootingArrow.physicsBody!, anchor: CGPoint(x: target.position.x, y: 0))
-        self.physicsWorld.add(a)
+
         
-        if score > 10 {
+        let join = SKPhysicsJointFixed.joint(withBodyA: target.physicsBody!, bodyB: shootingArrow.physicsBody!, anchor: CGPoint(x: 0, y: 0))
+        self.physicsWorld.add(join)
+        
+        if score > 50 {
             let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
             let gameOverScene = GameOverScene(size: self.size, loose: false)
             view?.presentScene(gameOverScene, transition: reveal)

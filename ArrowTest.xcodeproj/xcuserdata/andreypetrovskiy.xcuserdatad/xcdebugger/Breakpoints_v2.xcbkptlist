@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ArrowTest/GameScene.swift"
-            timestampString = "589583897.4857531"
+            timestampString = "589587529.457357"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "didShot(shootingArrow:target:)"
             landmarkType = "7">
          </BreakpointContent>
